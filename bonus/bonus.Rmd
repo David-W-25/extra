@@ -1,0 +1,29 @@
+---
+title: "bonus"
+author: "David"
+date: "2024-12-03"
+output: github_document
+---
+
+
+## here
+```{r}
+dt = read_csv(here::here("data", "birthweight.csv"))
+
+```
+
+```{r}
+with(mtcars, t.test(mpg[am == 0], mpg[am == 1]))
+
+t.test(mpg ~ am, data = mtcars) |>
+  broom::tidy()
+
+lm(mpg ~ am, data = mtcars) |>
+  broom::tidy()
+
+```
+
+
+
+
+
